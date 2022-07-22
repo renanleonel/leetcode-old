@@ -1,10 +1,12 @@
 ​can also be done with sorting, taking into consideration time complexity for sorting
 
 ```py
-sortedS = ''.join(sorted(s))
-    sortedT = ''.join(sorted(t))
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        sortedS = ''.join(sorted(s))
+            sortedT = ''.join(sorted(t))
 
-    if sortedS != sortedT:
-        return False
-    return True
+            if sortedS != sortedT:
+                return False
+            return True
 ```
