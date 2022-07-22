@@ -1,4 +1,4 @@
-​can also be done with sorting, taking into consideration time complexity for sorting
+​can also be done with sorting, taking into consideration time complexity for sorting.
 
 ```py
 class Solution:
