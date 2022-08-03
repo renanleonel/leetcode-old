@@ -3,8 +3,8 @@ class Solution:
         left, right = 0, 1
         best = 0
         while right < len(prices):
-            profit = prices[right] - prices[left]
             if prices[left] < prices[right]:
+                profit = prices[right] - prices[left]
                 best = max(profit, best)
             else:
                 left = right
