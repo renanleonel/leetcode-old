@@ -1,12 +1,8 @@
 class Solution:
     def firstUniqChar(self, s: str) -> int:
         hashmap = {}
-
-        for i in range(len(s)):
-            if s[i] not in hashmap:
-                hashmap[s[i]] = 1
-            else:
-                hashmap[s[i]] = hashmap[s[i]] + 1
+        for index in range(len(s)):
+            hashmap[s[index]] = 1 + hashmap.get(s[index], 0)
 
         for i in range(len(s)):
             if hashmap[s[i]]==1:
