@@ -1,11 +1,14 @@
 class Solution:
     def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
-        smaller=0
-        ans=[]
-        for num in nums:
-            for num2 in nums:
-                if num2 < num:
-                    smaller+=1
-            ans.append(smaller)
-            smaller = 0
-        return ans
+        aux = sorted(nums)
+        hashmap = {}
+        result = []
+
+        for i in range(len(aux)):
+            if aux[i] not in hashmap:
+                hashmap[aux[i]] = i
+
+        for i in range(len(nums)):
+            result.append(hashmap[nums[i]])
+
+        return result
