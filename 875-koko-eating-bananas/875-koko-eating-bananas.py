@@ -4,11 +4,9 @@ class Solution:
     def minEatingSpeed(self, piles: List[int], h: int) -> int:
         maximo = max(piles)
         hours = 0
-        minimoPossivel = 0
-        maximoImpossivel = 0
+        minimoPossivel, maximoImpossivel = 0, 0
 
         while True:
-
             for i in piles:
                 hours += math.ceil(i/maximo)
 
