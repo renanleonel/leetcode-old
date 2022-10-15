@@ -1,3 +1,3 @@
 # leetcode
 
-all exercises done in python.
+all exercises done in python
